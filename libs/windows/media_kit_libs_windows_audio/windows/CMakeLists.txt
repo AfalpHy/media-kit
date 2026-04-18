@@ -66,8 +66,8 @@ endfunction()
 # Detect architecture and set appropriate libmpv archive
 if(${FLUTTER_TARGET_PLATFORM} STREQUAL "windows-x64")
   set(LIBMPV_ARCH "x86_64")
-  set(LIBMPV "mpv-dev-x86_64-20251213-git-140ec21.7z")
-  set(LIBMPV_MD5 "bf77216724f0f290dd14d2b1bc9826df")
+  set(LIBMPV "mpv-dev-x86_64-v3-20260418-git-140ec21.zip")
+  set(LIBMPV_MD5 "e5e770b94377ba01b680e19164575bf8")
 else()
   set(LIBMPV_ARCH "aarch64")
   set(LIBMPV "mpv-dev-aarch64-20251213-git-140ec21.7z")
@@ -75,7 +75,7 @@ else()
 endif()
 
 # Download URL for the libmpv archive from the latest release
-set(LIBMPV_URL "https://github.com/media-kit/libmpv-win32-audio-cmake/releases/download/20251213/${LIBMPV}")
+set(LIBMPV_URL "https://github.com/AfalpHy/libmpv-win32-audio-cmake/releases/download/20260418/${LIBMPV}")
 
 # Download location of the libmpv archive.
 set(LIBMPV_ARCHIVE "${CMAKE_BINARY_DIR}/${LIBMPV}")
