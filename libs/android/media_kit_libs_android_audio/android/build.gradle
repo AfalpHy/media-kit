@@ -58,10 +58,10 @@ task downloadDependencies(type: Exec)  {
 
         // Download all *.jar dependencies & verify their MD5 checksums.
         def filesToDownload = [
-            ["url": "https://github.com/AfalpHy/libmpv-android-audio-build/releases/download/v0.41.0/default-arm64-v8a.jar", "md5": "098d579d436cf33fdc6b7883b835f20f", "destination": file("$buildDir/v1.1.9/default-arm64-v8a.jar")],
-            ["url": "https://github.com/AfalpHy/libmpv-android-audio-build/releases/download/v0.41.0/default-armeabi-v7a.jar", "md5": "a06473f4b10040df8fd560d37632e034", "destination": file("$buildDir/v1.1.9/default-armeabi-v7a.jar")],
-            ["url": "https://github.com/AfalpHy/libmpv-android-audio-build/releases/download/v0.41.0/default-x86_64.jar", "md5": "546d7f80fe139b331c8030a15aa18a9a", "destination": file("$buildDir/v1.1.9/default-x86_64.jar")],
-            ["url": "https://github.com/AfalpHy/libmpv-android-audio-build/releases/download/v0.41.0/default-x86.jar", "md5": "df3e5b71aed212defc0964880441b8cf", "destination": file("$buildDir/v1.1.9/default-x86.jar")]
+            ["url": "https://github.com/AfalpHy/libmpv-android-audio-build/releases/download/v0.41.0/default-arm64-v8a.jar", "md5": "9e9c070bfc194ae8cb0fbb0d8b9f3826", "destination": file("$buildDir/v1.1.9/default-arm64-v8a.jar")],
+            ["url": "https://github.com/AfalpHy/libmpv-android-audio-build/releases/download/v0.41.0/default-armeabi-v7a.jar", "md5": "80fc833c34f56a770170cb11d6efd295", "destination": file("$buildDir/v1.1.9/default-armeabi-v7a.jar")],
+            ["url": "https://github.com/AfalpHy/libmpv-android-audio-build/releases/download/v0.41.0/default-x86_64.jar", "md5": "47204372fa35e1d3f0cd2ba32a7cb3d8", "destination": file("$buildDir/v1.1.9/default-x86_64.jar")],
+            ["url": "https://github.com/AfalpHy/libmpv-android-audio-build/releases/download/v0.41.0/default-x86.jar", "md5": "62cf1af4ff979d8bab5414ae5975babe", "destination": file("$buildDir/v1.1.9/default-x86.jar")]
         ]
 
         filesToDownload.each { fileInfo ->
