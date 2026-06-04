@@ -4,36 +4,38 @@
 import PackageDescription
 
 let libmpvTargets = [
+    "Ass",
     "Avcodec",
     "Avfilter",
     "Avformat",
     "Avutil",
-    "Mbedcrypto",
-    "Mbedtls",
-    "Mbedx509",
+    "Freetype",
+    "Fribidi",
+    "Harfbuzz",
     "Mpv",
     "Swresample",
     "Swscale"
 ]
 
-let libmpvArtifactBase = "https://github.com/media-kit/libmpv-darwin-build/releases/download/v0.7.0/libmpv-xcframeworks_v0.7.0_macos-universal-audio-full"
+let libmpvArtifactBase = "https://github.com/AfalpHy/libmpv-darwin-build/releases/download/v0.36.0/libmpv-xcframeworks_v0.36.0_macos-universal-audio-default"
 let libmpvChecksums = [
-    "Avcodec": "f6e069c6f5cafec22ef627581a060d1023ccf271d8c7b68f06bb0d88c950c004",
-    "Avfilter": "ff96f16434b31a86abaf449899a00af513c250a5df1a10ca0a54edf44b56813e",
-    "Avformat": "280f460238ba21a14499a597c0acf3136d91ef76695fbb92baa43cfae77e28a2",
-    "Avutil": "e1f12d87fdb75cf171ee194732a982a28dd35629ffda19918df7f64a32a8ef33",
-    "Mbedcrypto": "4d1c8cac9a138f87a027d3693a4e79cefbe93e3a437fc120b12b3ccee7561a1f",
-    "Mbedtls": "35487e0a17f77aeb90fbe0bda8287a6199e5785329a44236dd07146fcf8241f6",
-    "Mbedx509": "6fbaf1af7ea11d261565b293fe622d746d3be415e56d8b3b73de40840ec1c501",
-    "Mpv": "38ba4f85bc035099497ebc95a068f20cd462162dae5b431f7fe64004041474c6",
-    "Swresample": "86d9f31bc2ca354e45fcfdaf1b8fdd388b3d47d867d6789c688f2f61fd9552eb",
-    "Swscale": "c0ef85b08ead86e0f968cfbd77b1d6914dc341ecd1e3374870411be6ebbd16f0"
+    "Ass": "b3590fef954322f037cbba586d066d621381a843741511d6dc84d572bf1f8fa4",
+    "Avcodec": "8ae22e5158abce63b848cb8363068310a4ff0730d55d59152fdf2344f167dba3",
+    "Avfilter": "35ea58f184950373ea8d3f4ab55eca48315bb16a554c93d383d5593ac464721d",
+    "Avformat": "8c198619f95ee88136b06430d51e78d42a94a62392d0dbcb04536b8f01cf2e5c",
+    "Avutil": "e8bd17f846a89e7d56f0d76bb82bae00316da4ba0af9c8c3d5cc931a33766e2a",
+    "Freetype": "111512abb2188a08415d69dadfd0f217625fbe43a48e9c5e880b447222cef733",
+    "Fribidi": "e080a316f16c61ba7ddcbc74b68888f64fdc83c9b2901758f1e5d5372de05af9",
+    "Harfbuzz": "20c8c2c4770b3a979d341680008129677a515f50f63e2a5929e9fdbccd094df3",
+    "Mpv": "c230bfa4349ebb9b9c00c7dd57b946cbde475f3301a24659b880f8c2c1829b99",
+    "Swresample": "5a9f6c6fbe2736bb50cc5d426d90072b555944ec985aa30f55f870abf1a8636e",
+    "Swscale": "3123c336124a1d8d3de7464474b5b4a1284cbe79039f0d4151dad5bc1c3bc923"
 ]
 
 let package = Package(
     name: "media_kit_libs_macos_audio",
     platforms: [
-        .macOS("10.9")
+        .macOS("10.12")
     ],
     products: [
         .library(name: "media-kit-libs-macos-audio", targets: ["media_kit_libs_macos_audio"] + libmpvTargets)
