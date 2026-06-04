@@ -38,7 +38,7 @@ let package = Package(
         .macOS("10.12")
     ],
     products: [
-        .library(name: "media-kit-libs-macos-audio", targets: ["media_kit_libs_macos_audio"] + libmpvTargets)
+        .library(name: "media-kit-libs-macos-audio", targets: ["media_kit_libs_macos_audio"] + libmpvTargets),
         .library(name: "Mpv", targets: ["Mpv"])
     ],
     dependencies: [],
