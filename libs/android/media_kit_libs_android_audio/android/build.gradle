@@ -58,10 +58,10 @@ task downloadDependencies(type: Exec)  {
 
         // Download all *.jar dependencies & verify their MD5 checksums.
         def filesToDownload = [
-            ["url": "https://github.com/AfalpHy/libmpv-android-audio-build/releases/download/v0.41.0/default-arm64-v8a.jar", "md5": "9e9c070bfc194ae8cb0fbb0d8b9f3826", "destination": file("$buildDir/v1.1.9/default-arm64-v8a.jar")],
-            ["url": "https://github.com/AfalpHy/libmpv-android-audio-build/releases/download/v0.41.0/default-armeabi-v7a.jar", "md5": "80fc833c34f56a770170cb11d6efd295", "destination": file("$buildDir/v1.1.9/default-armeabi-v7a.jar")],
-            ["url": "https://github.com/AfalpHy/libmpv-android-audio-build/releases/download/v0.41.0/default-x86_64.jar", "md5": "47204372fa35e1d3f0cd2ba32a7cb3d8", "destination": file("$buildDir/v1.1.9/default-x86_64.jar")],
-            ["url": "https://github.com/AfalpHy/libmpv-android-audio-build/releases/download/v0.41.0/default-x86.jar", "md5": "62cf1af4ff979d8bab5414ae5975babe", "destination": file("$buildDir/v1.1.9/default-x86.jar")]
+            ["url": "https://github.com/AfalpHy/libmpv-android-audio-build/releases/download/20260920/default-arm64-v8a.jar", "md5": "3bfb89131249a524423a4a9fb601ee46", "destination": file("$buildDir/v1.1.9/default-arm64-v8a.jar")],
+            ["url": "https://github.com/AfalpHy/libmpv-android-audio-build/releases/download/20260920/default-armeabi-v7a.jar", "md5": "c9a0329550eeb731292cd9cc689a0cee", "destination": file("$buildDir/v1.1.9/default-armeabi-v7a.jar")],
+            ["url": "https://github.com/AfalpHy/libmpv-android-audio-build/releases/download/20260920/default-x86_64.jar", "md5": "c42d242da29cd561ae38a1dd63a74916", "destination": file("$buildDir/v1.1.9/default-x86_64.jar")],
+            ["url": "https://github.com/AfalpHy/libmpv-android-audio-build/releases/download/20260920/default-x86.jar", "md5": "6655d3f0513cf0ff75a3b71c0a9bf409", "destination": file("$buildDir/v1.1.9/default-x86.jar")]
         ]
 
         filesToDownload.each { fileInfo ->
