@@ -17,19 +17,19 @@ let libmpvTargets = [
     "Swscale"
 ]
 
-let libmpvArtifactBase = "https://github.com/AfalpHy/libmpv-darwin-build/releases/download/v0.41.0/libmpv-xcframeworks_v0.41.0_macos-universal-audio-default"
+let libmpvArtifactBase = "https://github.com/AfalpHy/libmpv-darwin-build/releases/download/v0.36.0/libmpv-xcframeworks_v0.36.0_macos-universal-audio-default"
 let libmpvChecksums = [
-    "Ass": "bc4bbe6b7397da48e3fbc0bc32b38741cd76b725bab48419f6a1ae1a02b57c3e",
-    "Avcodec": "25f9c7ca2ba5522d175a0afd0478e4a03c7b8fb6f0a0e6cdac9be4cdeaa6de64",
-    "Avfilter": "6601df32552656be92e567d2753d111d4d920185cfcb0c28ba62a74e69c5ed0a",
-    "Avformat": "985441b8dfa191c74e338dec044a9372c6711e2d318aef535f0825c806bea76a",
-    "Avutil": "00d0e49b1305595e3f4eff269929bf9ed237588aa52ca8a75910a6fb1d55a92d",
-    "Freetype": "751a83adfa3bc03b6c2c44bacd619d380722399be696b9ad09c354528943f041",
-    "Fribidi": "cbdabe47830968b48389345002ca69f60aff7763d8ec32034160ca3fa515570b",
-    "Harfbuzz": "eea707b034964d5774c768ceaddc1eb5381e6a119cbc98065faa5a04b082a40e",
-    "Mpv": "09f73a2261a6b6fa0803cac555b3792404e053f34e740778cba4dcbf7ee80247",
-    "Swresample": "eb6dcb6d8fa45d469e85fc73c3915c8c1433af0b0df0cb8f43d7f81b15ab10d0",
-    "Swscale": "b5ddb781fae16fbb36ca5355e7b1738e0ad5ca016ce44665d0dd9f4d737433d7"
+    "Ass": "b3590fef954322f037cbba586d066d621381a843741511d6dc84d572bf1f8fa4",
+    "Avcodec": "8ae22e5158abce63b848cb8363068310a4ff0730d55d59152fdf2344f167dba3",
+    "Avfilter": "35ea58f184950373ea8d3f4ab55eca48315bb16a554c93d383d5593ac464721d",
+    "Avformat": "8c198619f95ee88136b06430d51e78d42a94a62392d0dbcb04536b8f01cf2e5c",
+    "Avutil": "e8bd17f846a89e7d56f0d76bb82bae00316da4ba0af9c8c3d5cc931a33766e2a",
+    "Freetype": "111512abb2188a08415d69dadfd0f217625fbe43a48e9c5e880b447222cef733",
+    "Fribidi": "e080a316f16c61ba7ddcbc74b68888f64fdc83c9b2901758f1e5d5372de05af9",
+    "Harfbuzz": "20c8c2c4770b3a979d341680008129677a515f50f63e2a5929e9fdbccd094df3",
+    "Mpv": "c230bfa4349ebb9b9c00c7dd57b946cbde475f3301a24659b880f8c2c1829b99",
+    "Swresample": "5a9f6c6fbe2736bb50cc5d426d90072b555944ec985aa30f55f870abf1a8636e",
+    "Swscale": "3123c336124a1d8d3de7464474b5b4a1284cbe79039f0d4151dad5bc1c3bc923"
 ]
 
 let package = Package(
