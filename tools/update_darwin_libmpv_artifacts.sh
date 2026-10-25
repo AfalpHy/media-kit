@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-REPO="media-kit/libmpv-darwin-build"
+REPO="AfalpHy/libmpv-darwin-build"
 DRY_RUN=0
-VERSION="v0.7.0"
+VERSION="v0.41.0"
 VERSION_SET=0
 
 usage() {
@@ -13,7 +13,7 @@ Usage:
 
 Example:
   tools/update_darwin_libmpv_artifacts.sh
-  tools/update_darwin_libmpv_artifacts.sh v0.7.0
+  tools/update_darwin_libmpv_artifacts.sh v0.41.0
 
 The script reads GitHub release asset digests and updates Darwin libmpv artifact
 versions/checksums. Existing CocoaPods Makefiles use .tar.gz assets. Future
@@ -73,6 +73,16 @@ digest_for() {
     end
 
     puts digest.sub(/\Asha256:/, "")
+  '
+}
+
+has_asset() {
+  local asset_name="$1"
+
+  RELEASE_JSON="$RELEASE_JSON" ASSET_NAME="$asset_name" ruby -rjson -e '
+    release = JSON.parse(File.read(ENV.fetch("RELEASE_JSON")))
+    name = ENV.fetch("ASSET_NAME")
+    exit(release.fetch("assets").any? { |item| item["name"] == name } ? 0 : 1)
   '
 }
 
@@ -166,6 +176,12 @@ update_artifact() {
 
   local tar_name="libmpv-xcframeworks_${VERSION}_${platform}-universal-${variant}-${flavor}.tar.gz"
   local tar_checksum
+
+  if ! has_asset "$tar_name"; then
+    echo "${label}: skipped, ${tar_name} is not published in ${REPO} ${VERSION}"
+    return 0
+  fi
+
   tar_checksum="$(digest_for "$tar_name")"
 
   update_makefile "$makefile_path" "$VERSION" "$tar_checksum"
@@ -185,13 +201,14 @@ update_artifact \
   "default" \
   "libs/ios/media_kit_libs_ios_audio/ios/Makefile" \
   "libs/ios/media_kit_libs_ios_audio/ios/media_kit_libs_ios_audio/Package.swift" \
+  "Ass" \
   "Avcodec" \
   "Avfilter" \
   "Avformat" \
   "Avutil" \
-  "Mbedcrypto" \
-  "Mbedtls" \
-  "Mbedx509" \
+  "Freetype" \
+  "Fribidi" \
+  "Harfbuzz" \
   "Mpv" \
   "Swresample" \
   "Swscale"
@@ -226,16 +243,17 @@ update_artifact \
   "macOS audio" \
   "macos" \
   "audio" \
-  "full" \
+  "default" \
   "libs/macos/media_kit_libs_macos_audio/macos/Makefile" \
   "libs/macos/media_kit_libs_macos_audio/macos/media_kit_libs_macos_audio/Package.swift" \
+  "Ass" \
   "Avcodec" \
   "Avfilter" \
   "Avformat" \
   "Avutil" \
-  "Mbedcrypto" \
-  "Mbedtls" \
-  "Mbedx509" \
+  "Freetype" \
+  "Fribidi" \
+  "Harfbuzz" \
   "Mpv" \
   "Swresample" \
   "Swscale"

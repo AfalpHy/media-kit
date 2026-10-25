@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
 
   s.vendored_frameworks = 'Frameworks/*.xcframework'
 
-  s.platform = :osx, '10.12'
+  s.platform = :osx, '13.0'
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES' }
   s.swift_version = '5.0'
 end
