@@ -9,27 +9,31 @@ let libmpvTargets = [
     "Avfilter",
     "Avformat",
     "Avutil",
+    "Crypto",
     "Freetype",
     "Fribidi",
     "Harfbuzz",
     "Mpv",
+    "Ssl",
     "Swresample",
     "Swscale"
 ]
 
-let libmpvArtifactBase = "https://github.com/AfalpHy/libmpv-darwin-build/releases/download/v0.41.0/libmpv-xcframeworks_v0.41.0_ios-universal-audio-default"
+let libmpvArtifactBase = "https://github.com/AfalpHy/libmpv-darwin-build/releases/download/v0.42.0/libmpv-xcframeworks_v0.42.0_ios-universal-audio-default"
 let libmpvChecksums = [
-    "Ass": "4850988805ae87ae048ce36e84724348ad6a1ffd9c7e69ceeb3fa49218492f82",
-    "Avcodec": "ac9cc569770b3ab6ebf01924fc7d7a7b4456d9f5cda212489c6de1d0b64ffeb0",
-    "Avfilter": "bf7f332ae47cda16aa8df07c99292bc55edd7ece99d632720c3ed9dc2f4b7450",
-    "Avformat": "960d4678fdb1c53123aef078b71bc783ab612f54701eee886eae98794f8478a9",
-    "Avutil": "57cd656e5b299e13bcf6d46c8576e833b59826b3f8bb9af5ad0e7b9ea2584caa",
-    "Freetype": "35a4e300916c6e2313f62a619b048ac6f74539a876f515f0c43837356ba00205",
-    "Fribidi": "ffe4a9004c4c0a64920bc54e0071833be99713ed701724679efe0d6f48cb9c76",
-    "Harfbuzz": "3b75700842f26b0d244170ca079cd22c97069fa9d8e133b88b3c1331a2debd1d",
-    "Mpv": "2ba2c20f0fb9ac10b6f7e9382d777b5c5d5bf552336ed248b140ce4e2c09284b",
-    "Swresample": "221f1d07cc26bc1a1b6dee667306556e58024f6193a7a31b48e9f55bff5b9896",
-    "Swscale": "b74706a55a9f010feb3ad092bca66410f518e2f83044c931560c98a9b880afda"
+    "Ass": "8a5ef1e999d3bd808e6472f868207d2f2ec2565f11ecd421f5064110ad8437f1",
+    "Avcodec": "70cf23448c327692ae53e45e38aa5ff7eb34b388e2a8310cc35b30595de04c3d",
+    "Avfilter": "4a1d1cdb6b0977310fdfd5067def2dad90ab4d2e4cd4bcd0443c9dcaed302b5f",
+    "Avformat": "5124f00e615567e1981af5f614a9355c5c22cc1d8bd7938c22452af471c3d282",
+    "Avutil": "5cc6b128c88a62779151dae2e41ef5de1a43560c6e82247721495ceef335495f",
+    "Crypto": "76fc84617abbc3816d0bb4ec8e7f6ed71583e51da369ad01ed5796351993c4d6",
+    "Freetype": "03b7e1fba9796c0be32c2d4e81808c6fa9f001e2f1f29f1383f5f3be1a178152",
+    "Fribidi": "982b462da97dc6748f57da9e1b1f3ea20a11b01235ff363b940f37923ba00156",
+    "Harfbuzz": "5ed47d1e7cdafe06036c63751fc8ed670b757528fa3284056935ce07b576f7dc",
+    "Mpv": "7328665aeba45c37ebe57a8c51adf215ad48a2e265f7074385d81930f307db99",
+    "Ssl": "eecc633b297e32ecbd33e3b255d7faf2337b828ba6f6bbe2b6f1e15c8fed8db6",
+    "Swresample": "7f29dffed55786ca8183b9d0afc27b7758447eb0da98f2f63adb2563de0c0da3",
+    "Swscale": "e53d4ff90ac41c42105e57104f816876ea1e2189540e46885fba0e04987f0022"
 ]
 
 let package = Package(
